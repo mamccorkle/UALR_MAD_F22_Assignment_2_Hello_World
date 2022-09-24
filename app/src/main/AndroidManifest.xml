@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO 02. Change the app name. New app name: First App -->
 <!-- TODO 03. Change the app icon. The new one might use the ic_country.svg image provided as foreground and a solid black color as background-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ualr.firstapp">
@@ -12,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.ualr.firstapp.MainActivity">
+            android:exported="false"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

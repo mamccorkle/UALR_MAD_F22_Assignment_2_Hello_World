@@ -9,7 +9,7 @@
 #### Instructions:
 
 > :heavy_check_mark: Change the package name of the app. New package name: com.ualr.firstapp
-> * Change the app name. New app name: First App
+> :heavy_check_mark: Change the app name. New app name: First App
 > * Change the app icon. The new icon will use the ic_country image drawable as foreground and light blue color as background.
 > * Set a new width value (120 dp) for the button with the "showBtn" id
 > * Add a new property to the "showBtn" button to align the text within to the left side of the button.
