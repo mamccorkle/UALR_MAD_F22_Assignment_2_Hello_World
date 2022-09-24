@@ -8,7 +8,7 @@
 
 #### Instructions:
 
-> * Change the package name of the app. New package name: com.ualr.firstapp
+> :heavy_check_mark: Change the package name of the app. New package name: com.ualr.firstapp
 > * Change the app name. New app name: First App
 > * Change the app icon. The new icon will use the ic_country image drawable as foreground and light blue color as background.
 > * Set a new width value (120 dp) for the button with the "showBtn" id
