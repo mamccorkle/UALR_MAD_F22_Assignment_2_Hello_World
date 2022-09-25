@@ -4,4 +4,8 @@
     <string name="write_msg_hint">Write the message</string>
     <string name="show_btn">show message</string>
     <string name="btn_text">show text</string>
+    <string name="alert_dialog_title">Empty Input</string>
+    <string name="alert_dialog_msg">Please enter the required text..</string>
+    <string name="ok">OK</string>
+    <string name="cleanbtn_text">Clean</string>
 </resources>

@@ -54,8 +54,21 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
-        <!-- TODO 08. Add a new button with the id "cleanBtn" to the layout with the same properties of the show button (showBtn) -->
-        <!-- TODO 09. Link the "cleanBtn" to the "cleanTextField" method so whenever the user taps the button the text field gets cleaned -->
+
+        <Button
+            android:id="@+id/cleanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:width="120dp"
+            android:background="#E91E63"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal|start|center_vertical"
+            android:onClick="cleanTextField"
+            android:text="@string/cleanbtn_text"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

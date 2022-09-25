@@ -18,7 +18,10 @@
 //
 package com.ualr.firstapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,10 +40,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(rootView);
     }
 
-    // TODO 06. Avoid updating the text label (userMsgTV) when the text field (userInputET) is empty
     public void showTextMessage(View view) {
-        mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+        if (mBinding.userInputET.getText().toString().isEmpty()) {
+            // Make user acknowledge that the text has not been entered via an alert dialog box:
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder
+            // Set the Title to the Alert Dialog Box:
+            .setTitle(getResources().getString(R.string.alert_dialog_title))
+
+            // Set the Message to the Alert Dialog Box:
+            .setMessage(getResources().getText(R.string.alert_dialog_msg))
+
+            // Set the Button Text on the Alert Dialog Box:
+            .setPositiveButton(getResources().getText(R.string.ok), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    Log.d("Button Id", String.valueOf(id));
+                    mBinding.userInputET.requestFocus();
+                }
+            });
+            AlertDialog alert = builder.create();
+            alert.show();
+
+        } else {
+            // Set the textview label text to the users input:
+            mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+        }
     }
 
-    // TODO 07. Create a new method called cleanTextField to delete the text inside the text field
+    public void cleanTextField( View view )
+    {
+        // Set the userMsgTV to the default message:
+        mBinding.userMsgTV.setText(getResources().getString(R.string.default_msg));
+
+        // Clear the input box:
+        mBinding.userInputET.getText().clear();
+    }
 }
